@@ -1,0 +1,43 @@
+//Example: https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+// See http://jshint.com/docs/ for more details
+// http://www.jshint.com/docs/options/
+// errors: https://github.com/jshint/jshint/blob/2.1.4/src/shared/messages.js
+
+{
+    //enforcers
+    "bitwise" : true,
+    "camelcase" : true,
+    "curly" : true,
+    "eqeqeq" : true,
+    "indent" : 4,
+    "latedef" : true,
+    "newcap" : true,
+    "noarg" : true,
+    "noempty" : true,
+    "quotmark" : "single",
+    "undef" : true,
+    "unused" : "vars",
+    "strict" : false,
+    "trailing" : true,
+    //"maxparams" : 3,
+    "maxdepth" : 3,
+
+    //relaxers
+    "multistr" : true,
+    "shadow" : true,
+    "sub" : true,
+
+    //environmentals
+    "devel" : true,
+    "browser" : true, //to automatically allow references to window, console, etc
+    "jquery" : true,
+
+    //custom globals
+    "predef" : {
+        "Backbone" : true,
+        "_" : true,
+        "define" : true,
+        "require" : true,
+        "mv" : true
+    }
+}

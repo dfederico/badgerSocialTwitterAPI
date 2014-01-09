@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "dependencies": [
+    {"name":"model","params":"{{name}}"},
+    {"name":"view","params":"{{name}}"},
+    {"name":"collection","params":"{{name}}"}
+  ]
+}

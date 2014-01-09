@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "from": "collection.js.hbs",
+      "to": "src/js/collections/{{name}}.js"
+    },
+    {
+      "from": "model.js.hbs",
+      "to": "src/js/models/{{name}}.js"
+    },
+    {
+      "from": "view.js.hbs",
+      "to":"src/js/views/{{name}}.js"
+    }
+  ],
+  "dependencies": []
+}

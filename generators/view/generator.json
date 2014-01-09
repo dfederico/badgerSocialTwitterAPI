@@ -1,0 +1,13 @@
+{
+  "files": [
+    {
+      "from": "view.js.hbs",
+      "to":"src/js/views/{{uncap name}}View.js"
+    },
+    {
+      "from": "template.html.hbs",
+      "to":"src/html/tpl{{#camelize}}{{name}}{{/camelize}}.html"
+    }
+  ],
+  "dependencies": []
+}

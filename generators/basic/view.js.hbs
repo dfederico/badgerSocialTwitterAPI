@@ -1,0 +1,24 @@
+/**
+ * This file is meant to be used as a template for creating views in this project.  It uses proper
+ * namespacing to allow access to intanciate from the console or the code itself (which is not recommended
+ * since we use RequireJS)
+ */
+
+define([
+	'core'
+], function (core) {
+
+	mv.views.{{name}}View = Backbone.View.extend({
+
+		el: '',
+
+		initialize: function () {},
+
+		render: function () {},
+
+		events: {}
+
+	});
+
+	return mv.views.{{name}}View;
+});

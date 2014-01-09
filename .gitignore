@@ -1,0 +1,7 @@
+npm-debug.log
+node_modules
+target
+hintresults.xml
+test/results
+doc
+.DS_Store

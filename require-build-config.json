@@ -1,0 +1,37 @@
+/*
+ * For documentation on what everything means, please refer to this URL: https://github.com/jrburke/r.js/blob/master/build/example.build.js
+ */
+
+{
+	"appDir": "<%= SRC_PATH %>",
+	"baseUrl": "js", // Path of source scripts, relative to this build file
+	"mainConfigFile": "<%= SRC_PATH %>js/main.js", // Path of main requirejs configuration file, relative to this build file
+	"dir": "<%= BUILD_PATH %>",
+	"keepBuildDir": true,
+	"preserveLicenseComments": false,
+	"findNestedDependencies": true,
+	// generateSourceMaps: true,
+	"inlineText": true,
+	// stubModules: ["text"],
+	"pragmas": {
+		"debugExclude": true
+	},
+
+	"modules": [{
+		"name": "core"
+	}, {
+		"name": "router",
+		"exclude": ["core"]
+	}],
+
+	"optimize": "uglify2", // Use "none" If you do not want to uglify.
+	"uglify2": {
+		"compress": {
+			"sequences": false,
+			"global_defs": {
+				"DEBUG": false
+			}
+		},
+		"warnings": true
+	}
+}

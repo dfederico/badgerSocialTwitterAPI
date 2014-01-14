@@ -5,9 +5,8 @@ define([
 
 	mv.collections.Tweets = Backbone.Collection.extend({
 
-		url: "/appstrapular-main/src/php/hellophp.php",
-		//url: "/appstrapular-main/src/block.json",
-		//url: "/appstrapular-main/src/php/jsonData.json",
+		//url: "/appstrapular-main/src/php/twitterSort.php",
+		url: "/socialBadgerClone/src/php/twitterSort.php",
 		model: Tweet
 	});
 

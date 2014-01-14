@@ -2,8 +2,7 @@
 	<h1>Twitter template</h1>
 	<ul>
 		{{ _.each(collection, function(tweet) { }}
-		<li>Welcome to: <a href="{{= tweet.firstName }}" class="example-links">{{= tweet.lastName }}</a></li>
+		<li><p>{{= tweet.text}} on: {{= tweet.created_at }}<p></li>
 		{{ }); }}
 	</ul>
-	<h1>End</h1>
 </div>

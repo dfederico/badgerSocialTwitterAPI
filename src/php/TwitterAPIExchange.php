@@ -196,6 +196,9 @@ class TwitterAPIExchange
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_TIMEOUT => 10,
+
+            CURLOPT_HTTPPROXYTUNNEL => TRUE,
+            CURLOPT_PROXY => 'http://cinext11.proxy.corporate.ge.com:80'
         );
 
         if (!is_null($postfields))

@@ -35,19 +35,19 @@ define([
 				view = mv.i.views.alertsView = new AlertsView({
 					el: mv.sections.mainContainer
 				});
-				// $.when(view.setup())
-				// 	.done(function () {
-				// 		view.render();
-				// 	})
-				// 	.fail(function (error) {
-				// 		console.log('alerts view failed');
-				// 	});
+				$.when(view.setup())
+					.done(function () {
+						view.render();
+					})
+					.fail(function (error) {
+						console.log('alerts view failed');
+					});
 			});
 		},
 
 		twitterView: function() {
-			require(['views/twitterView'], function(TwitterView){ 
-				view = mv.i.views.twitterView = new TwitterView({
+			require(['views/twitterFrameView'], function(TwitterFrameView){ 
+				view = mv.i.views.twitterFrameView = new TwitterFrameView({
 					el: mv.sections.mainContainer
 				});
 				$.when(view.setup())
@@ -55,7 +55,7 @@ define([
 						view.render();
 					})
 					.fail(function (error) {
-						console.log('twitterView failed');
+						console.log('twitterFrameView failed');
 					});
 			});
 		}

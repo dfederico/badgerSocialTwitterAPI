@@ -16,14 +16,46 @@ $settings = array(
     'consumer_secret' => "qfTC8DnzphhJGjB7hUMVqgESN3wDyavmSy8dG22hUUs"
 );
 
+$handle = $_GET["handle"];
+
+$encodeURL = "https://api.twitter.com/1/statuses/oembed.json";
 $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 $requestMethod = "GET";
-$getfield = '?screen_name=iagdotme&count=20';
+$getfield = '?screen_name=' . $handle . '&count=5';
  
 $twitter = new TwitterAPIExchange($settings);
-echo $twitter->setGetfield($getfield)
+$twitterData = $twitter->setGetfield($getfield)
              ->buildOauth($url, $requestMethod)
              ->performRequest();
+
+$twitterValue = json_decode($twitterData, true);
+
+$twitterArray = array();
+
+$smangwich = new TwitterAPIExchange($settings);
+
+
+
+
+foreach($twitterValue as $item){
+	//echo $item['id_str'];
+	$idString = $item['id_str'];
+	$gertField = '?id=' . $idString . '&align=none';
+	$arrayPlaceholder = $smangwich->setGetField($gertField)
+	->buildOauth($encodeURL, $requestMethod)
+	->performRequest();
+	$theDecoder = json_decode($arrayPlaceholder);
+	//$html = $theDecoder->html;
+	array_push($twitterArray, $theDecoder);
+	//array_push($twitterArray, $item['id_str']);
+}
+
+$twitterEncode = json_encode($twitterArray);
+echo $twitterEncode;
+
+//echo $twitterArray;
+
+//echo $twitterData;
 
 /** URL for REST request, see: https://dev.twitter.com/docs/api/1.1/ **/
 // $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';

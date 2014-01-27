@@ -44,38 +44,38 @@ define([
 		},
 
 		populateAlertValues: function (alertData) {
-			switch(alertData.type){
-				case mv.enums.alertTypes.SUCCESS:
-					this.model.set({
-						type: alertData.type,
-						icon: 'ok',
-						message: alertData.message,
-						scheme: 'success'
-					});
+			switch (alertData.type) {
+			case mv.enums.alertTypes.SUCCESS:
+				this.model.set({
+					type: alertData.type,
+					icon: 'ok',
+					message: alertData.message,
+					scheme: 'success'
+				});
 				break;
-				case mv.enums.alertTypes.WARNING:
-					this.model.set({
-						type: alertData.type,
-						icon: 'minus',
-						message: alertData.message,
-						scheme: 'warning'
-					});
+			case mv.enums.alertTypes.WARNING:
+				this.model.set({
+					type: alertData.type,
+					icon: 'minus',
+					message: alertData.message,
+					scheme: 'warning'
+				});
 				break;
-				case mv.enums.alertTypes.DANGER:
-					this.model.set({
-						type: alertData.type,
-						icon: 'remove',
-						message: alertData.message,
-						scheme: 'danger'
-					});
+			case mv.enums.alertTypes.DANGER:
+				this.model.set({
+					type: alertData.type,
+					icon: 'remove',
+					message: alertData.message,
+					scheme: 'danger'
+				});
 				break;
-				default:
-					this.model.set({
-						type: 'Default',
-						icon: 'stop',
-						message: 'Alert improperly triggered: please check your work',
-						scheme: 'default'
-					});
+			default:
+				this.model.set({
+					type: 'Default',
+					icon: 'stop',
+					message: 'Alert improperly triggered: please check your work',
+					scheme: 'default'
+				});
 			}
 		}
 

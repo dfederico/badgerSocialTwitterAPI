@@ -45,13 +45,13 @@ define([
 			});
 		},
 
-		twitterView: function() {
-			require(['views/twitterFrameView'], function(TwitterFrameView){ 
+		twitterView: function () {
+			require(['views/twitterFrameView'], function (TwitterFrameView) {
 				view = mv.i.views.twitterFrameView = new TwitterFrameView({
 					el: mv.sections.mainContainer
 				});
 				$.when(view.setup())
-					.done(function() {
+					.done(function () {
 						view.render();
 					})
 					.fail(function (error) {
